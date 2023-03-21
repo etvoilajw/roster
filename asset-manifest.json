@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/roster/static/js/main.aa5deca1.js",
+    "index.html": "/roster/index.html",
+    "main.aa5deca1.js.map": "/roster/static/js/main.aa5deca1.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.aa5deca1.js"
+  ]
+}
