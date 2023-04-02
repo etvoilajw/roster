@@ -23,6 +23,7 @@ const StaffShift = (shift) => {
 
   return (
     <div>
+      <p>{workType}</p>
       <p>
         {formattedStartTime} - {formattedEndTime}
       </p>
