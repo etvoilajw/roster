@@ -4,7 +4,6 @@ import AddStaff from "./components/AddStaff";
 import StaffList from "./components/StaffList";
 
 const App = () => {
-  const [staffs, setStaffs] = useState([]);
   const [roster, setRoster] = useState({});
 
   return (
