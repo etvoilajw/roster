@@ -28,4 +28,12 @@
   border-radius: 5px;
   align-self: center;
   margin: 5px;
+  background-color: white;
+  color: black;
+}
+
+.button:hover {
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
 }

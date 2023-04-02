@@ -8,6 +8,20 @@ const App = () => {
 
   return (
     <div>
+      <header
+        style={{
+          display: "flex",
+          height: "8vh",
+          backgroundColor: "darkblue",
+          color: "white",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "50px",
+          fontFamily: "Georgia, Times New Roman, Times, serif;",
+        }}
+      >
+        Staff Roster Management App
+      </header>
       <AddStaff roster={roster} setRoster={setRoster} />
       <AddShift roster={roster} setRoster={setRoster} />
       <StaffList roster={roster} />
