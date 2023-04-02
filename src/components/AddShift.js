@@ -2,6 +2,8 @@ import moment from "moment";
 import { useState } from "react";
 import Select from "./Select";
 
+import classes from "./AddShift.module.css";
+
 const DAYS = [
   "Monday",
   "Tuesday",
@@ -88,72 +90,91 @@ const AddShift = ({ roster, setRoster }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <label htmlFor="staff">staff</label>
-      <Select
-        name={"staff"}
-        value={inputShift.staff}
-        onChange={onSelectHandler}
-        options={Object.keys(roster)}
-      ></Select>
+    <form onSubmit={onSubmit} className={classes.formContainer}>
+      <div className={classes.container}>
+        <label className={classes.label} htmlFor="staff">
+          staff
+        </label>
+        <Select
+          name={"staff"}
+          value={inputShift.staff}
+          onChange={onSelectHandler}
+          options={Object.keys(roster)}
+        ></Select>
+      </div>
 
-      <label htmlFor="day">Day</label>
-      <Select
-        name={"day"}
-        value={inputShift.day}
-        onChange={onSelectHandler}
-        options={DAYS}
-      ></Select>
+      <div className={classes.container}>
+        <label className={classes.label} htmlFor="day">
+          Day
+        </label>
+        <Select
+          name={"day"}
+          value={inputShift.day}
+          onChange={onSelectHandler}
+          options={DAYS}
+        ></Select>
+      </div>
+      <div className={classes.container}>
+        <label className={classes.label} htmlFor="workType">
+          Work Type
+        </label>
+        <Select
+          name={"workType"}
+          value={inputShift.workType}
+          onChange={onSelectHandler}
+          options={WORKTYPES}
+        ></Select>
+      </div>
+      <div className={classes.container}>
+        <label className={classes.label} htmlFor={"Start"}>
+          Start time
+        </label>
+        <Select
+          name={"startHours"}
+          value={inputShift.startHours}
+          onChange={onSelectHandler}
+          options={HOURS}
+        ></Select>
 
-      <label htmlFor="workType">Work Type</label>
-      <Select
-        name={"workType"}
-        value={inputShift.workType}
-        onChange={onSelectHandler}
-        options={WORKTYPES}
-      ></Select>
-      <label htmlFor={"Start"}>Start time</label>
-      <Select
-        name={"startHours"}
-        value={inputShift.startHours}
-        onChange={onSelectHandler}
-        options={HOURS}
-      ></Select>
+        <Select
+          name={"startMinutes"}
+          value={inputShift.startMinutes}
+          onChange={onSelectHandler}
+          options={MINUTES}
+        ></Select>
 
-      <Select
-        name={"startMinutes"}
-        value={inputShift.startMinutes}
-        onChange={onSelectHandler}
-        options={MINUTES}
-      ></Select>
+        <Select
+          name={"startAMPM"}
+          value={inputShift.startAMPM}
+          onChange={onSelectHandler}
+          options={["AM", "PM"]}
+        ></Select>
+      </div>
+      <div className={classes.container}>
+        <label className={classes.label} htmlFor={"End"}>
+          End time
+        </label>
+        <Select
+          name={"endHours"}
+          value={inputShift.endHours}
+          onChange={onSelectHandler}
+          options={HOURS}
+        ></Select>
 
-      <Select
-        name={"startAMPM"}
-        value={inputShift.startAMPM}
-        onChange={onSelectHandler}
-        options={["AM", "PM"]}
-      ></Select>
-      <label htmlFor={"End"}>End time</label>
-      <Select
-        name={"endHours"}
-        value={inputShift.endHours}
-        onChange={onSelectHandler}
-        options={HOURS}
-      ></Select>
+        <Select
+          name={"endMinutes"}
+          value={inputShift.endMinutes}
+          onChange={onSelectHandler}
+          options={MINUTES}
+        ></Select>
 
-      <Select
-        name={"endMinutes"}
-        value={inputShift.endMinutes}
-        onChange={onSelectHandler}
-        options={MINUTES}
-      ></Select>
-
-      <Select
-        name={"endAMPM"}
-        value={inputShift.endAMPM}
-        onChange={onSelectHandler}
-        options={["AM", "PM"]}
-      ></Select>
+        <Select
+          name={"endAMPM"}
+          value={inputShift.endAMPM}
+          onChange={onSelectHandler}
+          options={["AM", "PM"]}
+        ></Select>
+      </div>
 
       <button>Submit</button>
     </form>

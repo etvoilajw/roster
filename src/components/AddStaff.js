@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import classes from "./AddStaff.module.css";
+
 const AddStaff = ({ roster, setRoster }) => {
   const [fullName, setFullName] = useState("");
 
@@ -46,16 +48,23 @@ const AddStaff = ({ roster, setRoster }) => {
   };
 
   return (
-    <form onSubmit={addStaff}>
-      <label htmlFor={"Full name"}>Full name</label>
-      <input
-        type={"text"}
-        value={fullName}
-        onChange={(e) => setFullName(e.target.value)}
-        placeholder={"Enter full name"}
-        required
-      ></input>
-      <button type="submit">Add Staff</button>
+    <form onSubmit={addStaff} className={classes.formContainer}>
+      <div className={classes.container}>
+        <label className={classes.label} htmlFor={"Full name"}>
+          Full name
+        </label>
+        <input
+          className={classes.input}
+          type={"text"}
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+          placeholder={"Enter full name"}
+          required
+        ></input>
+        <button className={classes.button} type="submit">
+          Add Staff
+        </button>
+      </div>
     </form>
   );
 };
