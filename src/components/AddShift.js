@@ -93,7 +93,7 @@ const AddShift = ({ roster, setRoster }) => {
     <form onSubmit={onSubmit} className={classes.formContainer}>
       <div className={classes.container}>
         <label className={classes.label} htmlFor="staff">
-          staff
+          Staff
         </label>
         <Select
           name={"staff"}
@@ -176,7 +176,7 @@ const AddShift = ({ roster, setRoster }) => {
         ></Select>
       </div>
 
-      <button>Submit</button>
+      <button className={classes.submitButton}>Submit</button>
     </form>
   );
 };
