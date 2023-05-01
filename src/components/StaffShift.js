@@ -28,6 +28,9 @@ const StaffShift = (shift) => {
         {formattedStartTime} - {formattedEndTime}
       </p>
       <p>{duration} hours</p>
+      <button>edit</button>
+      {/* TODO 
+      implement feature to edit exisiting shift */}
     </div>
   );
 };
