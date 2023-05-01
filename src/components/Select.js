@@ -1,12 +1,18 @@
 const Select = ({ name, value, onChange, options }) => {
   return (
-    <div style={{ display: "grid", alignItems: "center", marginLeft: "5px" }}>
+    <div
+      style={{
+        display: "grid",
+        alignItems: "center",
+        marginLeft: "5px",
+      }}
+    >
       <select
         name={name}
         value={value}
         onChange={onChange}
         required
-        style={{ width: "100px" }}
+        style={{ width: "100px", borderRadius: "5px" }}
       >
         <option disabled={true} value={""}>
           Please select {name}

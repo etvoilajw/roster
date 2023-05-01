@@ -2,6 +2,7 @@ import { useState } from "react";
 import AddShift from "./components/AddShift";
 import AddStaff from "./components/AddStaff";
 import StaffList from "./components/StaffList";
+import classes from "./App.module.css";
 
 const App = () => {
   const [roster, setRoster] = useState({});
@@ -23,7 +24,10 @@ const App = () => {
         Staff Roster Management App
       </header>
       <AddStaff roster={roster} setRoster={setRoster} />
-      <AddShift roster={roster} setRoster={setRoster} />
+
+      <div className={classes.addShiftContainer}>
+        <AddShift roster={roster} setRoster={setRoster} />
+      </div>
       <StaffList roster={roster} />
     </div>
   );
